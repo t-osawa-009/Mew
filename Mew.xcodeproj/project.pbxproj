@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAFBFB3E26FA10A700EB5DE0 /* ContainerView.swift in Headers */ = {isa = PBXBuildFile; fileRef = D279A30C2136B365007B045A /* ContainerView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAFBFB4326FA117900EB5DE0 /* Mew in Frameworks */ = {isa = PBXBuildFile; productRef = CAFBFB4226FA117900EB5DE0 /* Mew */; };
 		D2568DD9214BC02E00FCA44A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2568DD8214BC02E00FCA44A /* TableViewCell.swift */; };
 		D2568DDB214BC0E300FCA44A /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2568DDA214BC0E300FCA44A /* CellProtocol.swift */; };
 		D2568DDD214BC32D00FCA44A /* TableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2568DDC214BC32D00FCA44A /* TableViewHeaderFooterView.swift */; };
@@ -23,8 +25,7 @@
 		D279A3072136B34E007B045A /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A3062136B34E007B045A /* Instantiatable.swift */; };
 		D279A30A2136B357007B045A /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A3082136B357007B045A /* Injectable.swift */; };
 		D279A30B2136B357007B045A /* Interactable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A3092136B357007B045A /* Interactable.swift */; };
-		D279A30E2136B365007B045A /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A30C2136B365007B045A /* ContainerView.swift */; };
-		D279A3102136B36F007B045A /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A30F2136B36F007B045A /* Container.swift */; };
+		D279A3102136B36F007B045A /* Container.swift in Headers */ = {isa = PBXBuildFile; fileRef = D279A30F2136B36F007B045A /* Container.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		D279A3132136B3BA007B045A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D279A3122136B3BA007B045A /* UIKit.framework */; };
 		D279A3152136B579007B045A /* ContainerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A3142136B579007B045A /* ContainerViewTests.swift */; };
 		D279A3172136B5AB007B045A /* Supports.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A3162136B5AB007B045A /* Supports.swift */; };
@@ -84,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAFBFB4326FA117900EB5DE0 /* Mew in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +234,18 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		CAFBFB3D26FA107D00EB5DE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAFBFB3E26FA10A700EB5DE0 /* ContainerView.swift in Headers */,
+				D279A3102136B36F007B045A /* Container.swift in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		D2568DEB214BCA3B00FCA44A /* MewTestsApp */ = {
 			isa = PBXNativeTarget;
@@ -246,6 +260,9 @@
 			dependencies = (
 			);
 			name = MewTestsApp;
+			packageProductDependencies = (
+				CAFBFB4226FA117900EB5DE0 /* Mew */,
+			);
 			productName = MewTestsApp;
 			productReference = D2568DEC214BCA3B00FCA44A /* MewTestsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +272,7 @@
 			buildConfigurationList = OBJ_17 /* Build configuration list for PBXNativeTarget "Mew" */;
 			buildPhases = (
 				OBJ_20 /* Sources */,
+				CAFBFB3D26FA107D00EB5DE0 /* Headers */,
 				OBJ_22 /* Frameworks */,
 			);
 			buildRules = (
@@ -262,6 +280,8 @@
 			dependencies = (
 			);
 			name = Mew;
+			packageProductDependencies = (
+			);
 			productName = Mew;
 			productReference = "Mew::Mew::Product" /* Mew.framework */;
 			productType = "com.apple.product-type.framework";
@@ -317,6 +337,9 @@
 				Base,
 			);
 			mainGroup = OBJ_5;
+			packageReferences = (
+				CAFBFB3F26FA115F00EB5DE0 /* XCRemoteSwiftPackageReference "Mew" */,
+			);
 			productRefGroup = OBJ_13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -360,9 +383,7 @@
 				D25C01C821620C0100935A18 /* BackwardCompatibility.swift in Sources */,
 				D279A3192136B726007B045A /* _ContainerInterfaceBuilderView.xib in Sources */,
 				D2568DDD214BC32D00FCA44A /* TableViewHeaderFooterView.swift in Sources */,
-				D279A30E2136B365007B045A /* ContainerView.swift in Sources */,
 				D279A30B2136B357007B045A /* Interactable.swift in Sources */,
-				D279A3102136B36F007B045A /* Container.swift in Sources */,
 				D279A30A2136B357007B045A /* Injectable.swift in Sources */,
 				D2568DD9214BC02E00FCA44A /* TableViewCell.swift in Sources */,
 				D279A3072136B34E007B045A /* Instantiatable.swift in Sources */,
@@ -467,7 +488,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/MewTestsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mercari.ios.MewTestsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,7 +548,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/MewTestsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mercari.ios.MewTestsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,7 +574,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Mew.xcodeproj/Mew_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Mew;
@@ -573,7 +603,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Mew.xcodeproj/Mew_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Mew;
@@ -621,7 +654,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Mew.xcodeproj/MewTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
@@ -642,7 +679,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Mew.xcodeproj/MewTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
@@ -667,7 +708,8 @@
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				USE_HEADERMAP = NO;
 			};
@@ -713,6 +755,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CAFBFB3F26FA115F00EB5DE0 /* XCRemoteSwiftPackageReference "Mew" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/t-osawa-009/Mew.git";
+			requirement = {
+				kind = revision;
+				revision = 01c2190f657a4daaef92c3835309687bcb63329d;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CAFBFB4226FA117900EB5DE0 /* Mew */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAFBFB3F26FA115F00EB5DE0 /* XCRemoteSwiftPackageReference "Mew" */;
+			productName = Mew;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }

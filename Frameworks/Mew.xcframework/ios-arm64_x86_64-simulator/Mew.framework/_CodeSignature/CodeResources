@@ -4,9 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/Container.swift</key>
+		<data>
+		M2CQBDw8iV+qQntrd5jJyKuHH6w=
+		</data>
+		<key>Headers/ContainerView.swift</key>
+		<data>
+		f7jZgsnx9l5JiCfE3jsBFozG+Mk=
+		</data>
 		<key>Headers/Mew-Swift.h</key>
 		<data>
-		R8k4lhFb4JDLZyu6vcn6XeAcMu8=
+		9ZSN1eu5AHB3iVgAejBBfDmpdXs=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -14,67 +22,67 @@
 		</data>
 		<key>Modules/Mew.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		izSk3PZv1ckIRTBkVTiQ8zN/HxQ=
+		Yxx0UfuEOT3yPCLW8wPOE5QHuN0=
 		</data>
 		<key>Modules/Mew.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		izSk3PZv1ckIRTBkVTiQ8zN/HxQ=
+		Yxx0UfuEOT3yPCLW8wPOE5QHuN0=
 		</data>
 		<key>Modules/Mew.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		WyehjGr1vR5CXigIIMzURr/nSwk=
+		JpUnWm9tmRZc5RfaruQK3VyQ7c8=
 		</data>
 		<key>Modules/Mew.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		WyehjGr1vR5CXigIIMzURr/nSwk=
+		JpUnWm9tmRZc5RfaruQK3VyQ7c8=
 		</data>
 		<key>Modules/Mew.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		T1Jmb0JbjPWv++8EzugcdoomGJ8=
+		V2j1ve3ZcaUofNiWU6j8rB6Xx7I=
 		</data>
 		<key>Modules/Mew.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		4v9EYiMTw+6ORcPbxuHowVXaxws=
+		swoGFu3TVcJ4qOh6hAAkbV5dajY=
 		</data>
 		<key>Modules/Mew.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		UBIQVMv1bzsq6LYzfgczAY7mZYA=
+		Dhriqgbmhq0jehGhW0kguelMJfs=
 		</data>
 		<key>Modules/Mew.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		T1Jmb0JbjPWv++8EzugcdoomGJ8=
+		V2j1ve3ZcaUofNiWU6j8rB6Xx7I=
 		</data>
 		<key>Modules/Mew.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		4v9EYiMTw+6ORcPbxuHowVXaxws=
+		swoGFu3TVcJ4qOh6hAAkbV5dajY=
 		</data>
 		<key>Modules/Mew.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		UBIQVMv1bzsq6LYzfgczAY7mZYA=
+		Dhriqgbmhq0jehGhW0kguelMJfs=
 		</data>
 		<key>Modules/Mew.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KgACHzggl+k8rf/BYxTMTRbplPA=
+		bRMFZNJxgfOuoizZSQ7KFYlWhh4=
 		</data>
 		<key>Modules/Mew.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		JIHy8ZQ/OPtG+zQZDd0nkxlqRJA=
+		dia3htvfemm1nGP9CXYYgGae+gQ=
 		</data>
 		<key>Modules/Mew.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/sCm0v1xyG3JdLDiTVWS0CKxUyc=
+		gD7e3AZTWmLmozpw7+G3rzEBY9s=
 		</data>
 		<key>Modules/Mew.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		KgACHzggl+k8rf/BYxTMTRbplPA=
+		bRMFZNJxgfOuoizZSQ7KFYlWhh4=
 		</data>
 		<key>Modules/Mew.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		JIHy8ZQ/OPtG+zQZDd0nkxlqRJA=
+		dia3htvfemm1nGP9CXYYgGae+gQ=
 		</data>
 		<key>Modules/Mew.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		/sCm0v1xyG3JdLDiTVWS0CKxUyc=
+		gD7e3AZTWmLmozpw7+G3rzEBY9s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -82,128 +90,142 @@
 		</data>
 		<key>_ContainerInterfaceBuilderView.nib</key>
 		<data>
-		V5j4k4QUVvORYRk8MCFJc/P1+Hk=
+		OZ87ogRK3myKU5sSj8luiKDJ3gc=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/Container.swift</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lCPuzWW7ULj3paVtd0+/bija+GnllvV1HneqyEELBnc=
+			</data>
+		</dict>
+		<key>Headers/ContainerView.swift</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m9zfCT/3dHyHstLXhUexBKrHh9NFTqxxQojcwrpn9gM=
+			</data>
+		</dict>
 		<key>Headers/Mew-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			z3jWccYv7r7EwxWebAVg564g5AT0wvQXO4114/M2SmE=
+			rkfmv28LwJKQ4B2tMfHFnCBXrwXmRVRB1sXnlGW6LiI=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GnFltWEQvfodDdzo4JErFUcgwOzIUbp/MX1vWZ816JI=
+			XUvNddVjo3xkhPTb8Yp40MgZ1/qzoA4EBTU8BBL4dUU=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GnFltWEQvfodDdzo4JErFUcgwOzIUbp/MX1vWZ816JI=
+			XUvNddVjo3xkhPTb8Yp40MgZ1/qzoA4EBTU8BBL4dUU=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9dKMHmWCzw8xfTCT8jSfsLBiyP8MujylXwfzmpTkqwY=
+			bihMafh73iLDzPubIJjQNofnClikNFiCK3oOe4Na8D8=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9dKMHmWCzw8xfTCT8jSfsLBiyP8MujylXwfzmpTkqwY=
+			bihMafh73iLDzPubIJjQNofnClikNFiCK3oOe4Na8D8=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uhpRexO/baS5tcMfOOtTEtlnDmasciKrgiZhcNMCZQo=
+			hOtC4oBYe53OeKGV/NZNpPxLrrrsYk7JF997fkbUj80=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BdFuksGGWSKBfOE0w8fE9Dwi37ijXoihj8Ec/btEpg0=
+			f3Hj9dDvi5w7Kr6ySdMbJccSWK2vSiGGEEKQLNcobRU=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N0P5Io0mAUyntorq1QbGhVU04n6qpPANQQK9PvlfshI=
+			BAYan9dJEROiuh5Df4TH91ngguz/Ii8kbKmY08B2UUM=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uhpRexO/baS5tcMfOOtTEtlnDmasciKrgiZhcNMCZQo=
+			hOtC4oBYe53OeKGV/NZNpPxLrrrsYk7JF997fkbUj80=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BdFuksGGWSKBfOE0w8fE9Dwi37ijXoihj8Ec/btEpg0=
+			f3Hj9dDvi5w7Kr6ySdMbJccSWK2vSiGGEEKQLNcobRU=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N0P5Io0mAUyntorq1QbGhVU04n6qpPANQQK9PvlfshI=
+			BAYan9dJEROiuh5Df4TH91ngguz/Ii8kbKmY08B2UUM=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GnpatRfmkEwW3vEJG8vsn9vpn31mIHMpCu3Qb0n8VU8=
+			wgZf2wmh8HbqEFFf41Z7epGUWYAJK/SKfrgWZBReVh4=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6wIrC+YSKkLaiu0w/5f3YI4NZwSeR6Ch8EWV3XodnnY=
+			n6aq3R1Ra1yUoFufoHcDCGqo+Od7hWRMjmnHmk05RIE=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kfdVKrfrgJPz22fCDfzTZTrT4vUyAi3r3hEK7bk7Y8E=
+			92WQXuQjSXAorf8XWjvON25LY/ZrmiPCp+D/hn41QJk=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GnpatRfmkEwW3vEJG8vsn9vpn31mIHMpCu3Qb0n8VU8=
+			wgZf2wmh8HbqEFFf41Z7epGUWYAJK/SKfrgWZBReVh4=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6wIrC+YSKkLaiu0w/5f3YI4NZwSeR6Ch8EWV3XodnnY=
+			n6aq3R1Ra1yUoFufoHcDCGqo+Od7hWRMjmnHmk05RIE=
 			</data>
 		</dict>
 		<key>Modules/Mew.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kfdVKrfrgJPz22fCDfzTZTrT4vUyAi3r3hEK7bk7Y8E=
+			92WQXuQjSXAorf8XWjvON25LY/ZrmiPCp+D/hn41QJk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -217,7 +239,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YdCHxzhyHHlB1K8R3pYnBDb/E6hbcDB9rVHpGUcWc7o=
+			j4gujJRN53hWWWeflOMlHgZ8Pnpy9IBI47e9WCyY2GY=
 			</data>
 		</dict>
 	</dict>
