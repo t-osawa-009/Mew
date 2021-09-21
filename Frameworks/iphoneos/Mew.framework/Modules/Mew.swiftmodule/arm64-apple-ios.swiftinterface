@@ -1,0 +1,168 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Mew
+import Swift
+import UIKit
+@_inheritsConvenienceInitializers public class CollectionViewCell<T> : UIKit.UICollectionViewCell where T : UIKit.UIViewController {
+  public var content: T {
+    get
+  }
+  @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @objc override dynamic public func didMoveToSuperview()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CollectionViewCell {
+  public static func register(to collectionView: UIKit.UICollectionView)
+}
+extension CollectionViewCell where T : Mew.Injectable, T : Mew.Instantiatable {
+  public static func dequeued<V>(from collectionView: UIKit.UICollectionView, for indexPath: Foundation.IndexPath, input: T.Input, sizeConstraint: Mew.SizeConstraint? = nil, parentViewController: V) -> Mew.CollectionViewCell<T> where V : UIKit.UIViewController, V : Mew.Instantiatable, T.Environment == V.Environment
+}
+extension CollectionViewCell where T : Mew.Injectable, T : Mew.Instantiatable, T : Mew.Interactable {
+  public static func dequeued<V>(from collectionView: UIKit.UICollectionView, for indexPath: Foundation.IndexPath, input: T.Input, output: ((T.Output) -> Swift.Void)?, sizeConstraint: Mew.SizeConstraint? = nil, parentViewController: V) -> Mew.CollectionViewCell<T> where V : UIKit.UIViewController, V : Mew.Instantiatable, T.Environment == V.Environment
+}
+public enum CollectionViewSupplementaryKind {
+  case header
+  case footer
+  public static func == (a: Mew.CollectionViewSupplementaryKind, b: Mew.CollectionViewSupplementaryKind) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class CollectionReusableView<T> : UIKit.UICollectionReusableView where T : UIKit.UIViewController {
+  public var content: T {
+    get
+  }
+  @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @objc override dynamic public func didMoveToSuperview()
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension CollectionReusableView {
+  public static func register(to collectionView: UIKit.UICollectionView, for kind: Mew.CollectionViewSupplementaryKind)
+}
+extension CollectionReusableView where T : Mew.Injectable, T : Mew.Instantiatable {
+  public static func dequeued<V>(from collectionView: UIKit.UICollectionView, of kind: Swift.String, for indexPath: Foundation.IndexPath, input: T.Input, sizeConstraint: Mew.SizeConstraint? = nil, parentViewController: V) -> Mew.CollectionReusableView<T> where V : UIKit.UIViewController, V : Mew.Instantiatable, T.Environment == V.Environment
+}
+extension CollectionReusableView where T : Mew.Injectable, T : Mew.Instantiatable, T : Mew.Interactable {
+  public static func dequeued<V>(from collectionView: UIKit.UICollectionView, of kind: Swift.String, for indexPath: Foundation.IndexPath, input: T.Input, output: ((T.Output) -> ())?, sizeConstraint: Mew.SizeConstraint? = nil, parentViewController: V) -> Mew.CollectionReusableView<T> where V : UIKit.UIViewController, V : Mew.Instantiatable, T.Environment == V.Environment
+}
+@_inheritsConvenienceInitializers public class TableViewHeaderFooterView<T> : UIKit.UITableViewHeaderFooterView where T : UIKit.UIViewController {
+  public typealias Content = T
+  public var content: T {
+    get
+  }
+  @objc override dynamic public init(reuseIdentifier: Swift.String?)
+  @available(*, unavailable)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @objc override dynamic public func didMoveToSuperview()
+  @objc deinit
+}
+extension TableViewHeaderFooterView {
+  public static func register(to tableView: UIKit.UITableView)
+}
+extension TableViewHeaderFooterView where T : Mew.Injectable, T : Mew.Instantiatable {
+  public static func dequeued<V>(from tableView: UIKit.UITableView, input: T.Input, parentViewController: V) -> Mew.TableViewHeaderFooterView<T> where V : UIKit.UIViewController, V : Mew.Instantiatable, T.Environment == V.Environment
+}
+extension TableViewHeaderFooterView where T : Mew.Injectable, T : Mew.Instantiatable, T : Mew.Interactable {
+  public static func dequeued<V>(from tableView: UIKit.UITableView, input: T.Input, output: ((T.Output) -> ())?, parentViewController: V) -> Mew.TableViewHeaderFooterView<T> where V : UIKit.UIViewController, V : Mew.Instantiatable, T.Environment == V.Environment
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable public class ContainerView : UIKit.UIStackView {
+  @objc @IBInspectable public var estimatedHeight: CoreGraphics.CGFloat
+  @objc @IBInspectable public var estimatedWidth: CoreGraphics.CGFloat
+  @objc override dynamic public func prepareForInterfaceBuilder()
+  public func addArrangedViewController(_ viewController: UIKit.UIViewController, parentViewController: UIKit.UIViewController)
+  public func insertArrangedViewController(_ viewController: UIKit.UIViewController, stackIndex: Swift.Int, parentViewController: UIKit.UIViewController)
+  public func removeArrangedViewController(_ viewController: UIKit.UIViewController)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol Interactable {
+  associatedtype Output
+  func output(_ handler: ((Self.Output) -> Swift.Void)?)
+}
+extension ContainerView {
+  @_hasMissingDesignatedInitializers final public class Container<Content, Parent> where Content : UIKit.UIViewController, Content : Mew.Instantiatable, Parent : UIKit.UIViewController, Parent : Mew.Instantiatable, Content.Environment == Parent.Environment {
+    @objc deinit
+  }
+}
+extension ContainerView.Container : Mew.Injectable where Content : Mew.Injectable {
+  public typealias Input = Content.Input?
+  public typealias Inputs = [Content.Input]
+  final public func input(_ input: Mew.ContainerView.Container<Content, Parent>.Input)
+  final public func inputs(_ inputs: Mew.ContainerView.Container<Content, Parent>.Inputs)
+}
+extension ContainerView.Container : Mew.Interactable where Content : Mew.Interactable {
+  public typealias Output = Content.Output
+  final public func output(_ handler: ((Content.Output) -> Swift.Void)?)
+}
+extension ContainerView {
+  @discardableResult
+  public func makeContainer<ViewController, Parent>(for type: ViewController.Type, parentViewController: Parent, with input: ViewController.Input) -> Mew.ContainerView.Container<ViewController, Parent> where ViewController : UIKit.UIViewController, ViewController : Mew.Instantiatable, Parent : UIKit.UIViewController, Parent : Mew.Instantiatable, ViewController.Environment == Parent.Environment
+  public func makeContainer<ViewController, Parent>(for type: ViewController.Type, parentViewController: Parent) -> Mew.ContainerView.Container<ViewController, Parent> where ViewController : UIKit.UIViewController, ViewController : Mew.Injectable, ViewController : Mew.Instantiatable, Parent : UIKit.UIViewController, Parent : Mew.Instantiatable, ViewController.Environment == Parent.Environment
+}
+extension ContainerView {
+  @discardableResult
+  @available(*, deprecated, renamed: "makeContainer(for:parentViewController:with:)")
+  public func makeContainer<ViewController, Parent>(for type: ViewController.Type, parent: Parent, with input: ViewController.Input) -> Mew.ContainerView.Container<ViewController, Parent> where ViewController : UIKit.UIViewController, ViewController : Mew.Instantiatable, Parent : UIKit.UIViewController, Parent : Mew.Instantiatable, ViewController.Environment == Parent.Environment
+  @available(*, deprecated, renamed: "makeContainer(for:parentViewController:)")
+  public func makeContainer<ViewController, Parent>(for type: ViewController.Type, parent: Parent) -> Mew.ContainerView.Container<ViewController, Parent> where ViewController : UIKit.UIViewController, ViewController : Mew.Injectable, ViewController : Mew.Instantiatable, Parent : UIKit.UIViewController, Parent : Mew.Instantiatable, ViewController.Environment == Parent.Environment
+}
+public protocol Injectable {
+  associatedtype Input
+  func input(_ input: Self.Input)
+}
+extension Injectable where Self.Input == Swift.Void {
+  public func input(_ input: Self.Input)
+}
+@_inheritsConvenienceInitializers public class TableViewCell<T> : UIKit.UITableViewCell where T : UIKit.UIViewController {
+  public var content: T {
+    get
+  }
+  @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @objc override dynamic public func didMoveToSuperview()
+  @available(iOS 3.0, *)
+  @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension TableViewCell {
+  public static func register(to tableView: UIKit.UITableView)
+}
+extension TableViewCell where T : Mew.Injectable, T : Mew.Instantiatable {
+  public static func dequeued<V>(from tableView: UIKit.UITableView, for indexPath: Foundation.IndexPath, input: T.Input, parentViewController: V) -> Mew.TableViewCell<T> where V : UIKit.UIViewController, V : Mew.Instantiatable, T.Environment == V.Environment
+}
+extension TableViewCell where T : Mew.Injectable, T : Mew.Instantiatable, T : Mew.Interactable {
+  public static func dequeued<V>(from tableView: UIKit.UITableView, for indexPath: Foundation.IndexPath, input: T.Input, output: ((T.Output) -> ())?, parentViewController: V) -> Mew.TableViewCell<T> where V : UIKit.UIViewController, V : Mew.Instantiatable, T.Environment == V.Environment
+}
+public protocol Instantiatable {
+  associatedtype Input
+  associatedtype Environment
+  var environment: Self.Environment { get }
+  init(with input: Self.Input, environment: Self.Environment)
+}
+extension Instantiatable {
+  public static func instantiate(_ input: Self.Input, environment: Self.Environment) -> Self
+}
+extension Instantiatable where Self.Input == Swift.Void {
+  public static func instantiate(environment: Self.Environment) -> Self
+}
+public enum SizeConstraint : Swift.Equatable {
+  case maximumSize(CoreGraphics.CGSize)
+  case maximumWidth(CoreGraphics.CGFloat)
+  case maximumHeight(CoreGraphics.CGFloat)
+  case automaticDimension(UIKit.UICollectionViewLayout)
+  public static func == (a: Mew.SizeConstraint, b: Mew.SizeConstraint) -> Swift.Bool
+}
+extension SizeConstraint {
+  public init(from collectionViewLayout: UIKit.UICollectionViewLayout)
+  public static func size(_ size: CoreGraphics.CGSize) -> Mew.SizeConstraint
+  public static func dynamic(_ layout: UIKit.UICollectionViewLayout) -> Mew.SizeConstraint
+}
+extension Mew.CollectionViewSupplementaryKind : Swift.Equatable {}
+extension Mew.CollectionViewSupplementaryKind : Swift.Hashable {}

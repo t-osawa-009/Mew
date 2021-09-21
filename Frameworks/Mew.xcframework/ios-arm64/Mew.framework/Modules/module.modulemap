@@ -1,0 +1,4 @@
+framework module Mew {
+  header "Mew-Swift.h"
+  requires objc
+}
