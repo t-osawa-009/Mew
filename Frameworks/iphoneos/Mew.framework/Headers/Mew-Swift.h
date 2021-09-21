@@ -188,6 +188,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreGraphics;
+@import UIKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -204,6 +206,26 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="Mew",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
+
+@class NSNumber;
+@class NSCoder;
+
+/// A view that makes it easier to deal with UIViewControllers by splitting them up into smaller pieces.
+/// This helps to avoid monolithic ViewControllers and complicated Interface Builder files.
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC3Mew13ContainerView")
+@interface ContainerView : UIStackView
+/// Height anchor that available in InterfaceBuilder.
+@property (nonatomic) IBInspectable CGFloat estimatedHeight;
+/// Width anchor that available in InterfaceBuilder.
+@property (nonatomic) IBInspectable CGFloat estimatedWidth;
+- (void)prepareForInterfaceBuilder;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

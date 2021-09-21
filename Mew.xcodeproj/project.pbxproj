@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CAFBFB3E26FA10A700EB5DE0 /* ContainerView.swift in Headers */ = {isa = PBXBuildFile; fileRef = D279A30C2136B365007B045A /* ContainerView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAFBFB4326FA117900EB5DE0 /* Mew in Frameworks */ = {isa = PBXBuildFile; productRef = CAFBFB4226FA117900EB5DE0 /* Mew */; };
+		CAFBFB4426FA126D00EB5DE0 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A30F2136B36F007B045A /* Container.swift */; };
+		CAFBFB4526FA126D00EB5DE0 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D279A30C2136B365007B045A /* ContainerView.swift */; };
 		D2568DD9214BC02E00FCA44A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2568DD8214BC02E00FCA44A /* TableViewCell.swift */; };
 		D2568DDB214BC0E300FCA44A /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2568DDA214BC0E300FCA44A /* CellProtocol.swift */; };
 		D2568DDD214BC32D00FCA44A /* TableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2568DDC214BC32D00FCA44A /* TableViewHeaderFooterView.swift */; };
@@ -378,6 +380,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				CAFBFB4426FA126D00EB5DE0 /* Container.swift in Sources */,
+				CAFBFB4526FA126D00EB5DE0 /* ContainerView.swift in Sources */,
 				D2568DDF214BC3DC00FCA44A /* CollectionViewCell.swift in Sources */,
 				D2568DE1214BC51E00FCA44A /* CollectionReusableView.swift in Sources */,
 				D25C01C821620C0100935A18 /* BackwardCompatibility.swift in Sources */,
@@ -762,7 +766,7 @@
 			repositoryURL = "https://github.com/t-osawa-009/Mew.git";
 			requirement = {
 				kind = revision;
-				revision = 01c2190f657a4daaef92c3835309687bcb63329d;
+				revision = e3785e3970195763736fc141ebfc654e00426703;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
