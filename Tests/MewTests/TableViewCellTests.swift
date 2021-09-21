@@ -60,7 +60,7 @@ class TableViewCellTests: XCTestCase {
         let exp = expectation(description: #function + "\(#line)")
         let tableViewController = TableViewController(with: Array(0..<10), environment: ())
         let parent = UIViewController()
-        UIApplication.shared.keyWindow?.rootViewController = parent
+        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = parent
         parent.present(tableViewController, animated: true, completion: {
             let viewControllers = tableViewController.tableView.visibleCells
                 .compactMap { $0 as? TableViewCell<ViewController> }
@@ -111,14 +111,14 @@ class TableViewCellTests: XCTestCase {
                 AutolayoutViewController.Input(additionalWidth: CGFloat(Int.random(in: 0..<1000)), additionalHeight: CGFloat(Int.random(in: 0..<1000)))
             ]
         ]
-        UIApplication.shared.keyWindow?.rootViewController = tableViewController
+        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = tableViewController
         for expects in data {
             tableViewController.input(expects)
             let cells = tableViewController.tableView.visibleCells
             zip(expects, cells).forEach { expect, cell in
                 XCTAssertEqual(cell.frame.size, CGSize(width: tableViewController.tableView.frame.width, height: 200 + expect.additionalHeight + 0.5))
                 XCTAssertEqual(cell.contentView.frame.size, CGSize(width: tableViewController.tableView.frame.width, height: 200 + expect.additionalHeight))
-                let childViewController = tableViewController.childViewControllers.first(where: { $0.view.superview == cell.contentView }) as! AutolayoutViewController
+                let childViewController = tableViewController.children.first(where: { $0.view.superview == cell.contentView }) as! AutolayoutViewController
                 XCTAssertEqual(childViewController.view.frame.size, CGSize(width: min(tableViewController.tableView.frame.width, 200 + expect.additionalWidth), height: 200 + expect.additionalHeight))
                 XCTAssertFalse(cell.hasAmbiguousLayout)
             }

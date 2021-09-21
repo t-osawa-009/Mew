@@ -27,13 +27,13 @@ public protocol Instantiatable {
 }
 
 public extension Instantiatable {
-    public static func instantiate(_ input: Input, environment: Environment) -> Self {
+    static func instantiate(_ input: Input, environment: Environment) -> Self {
         return Self.init(with: input, environment: environment)
     }
 }
 
 public extension Instantiatable where Input == Void {
-    public static func instantiate(environment: Environment) -> Self {
+    static func instantiate(environment: Environment) -> Self {
         return Self.init(with: (), environment: environment)
     }
 }

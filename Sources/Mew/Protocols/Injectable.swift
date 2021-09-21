@@ -22,7 +22,7 @@ public protocol Injectable {
 }
 
 public extension Injectable where Input == Void {
-    public func input(_ input: Input) {
+    func input(_ input: Input) {
 
     }
 }

@@ -54,7 +54,7 @@ class CollectionViewCellTests: XCTestCase {
         let exp = expectation(description: #function + "\(#line)")
         let collectionViewController = CollectionViewController(with: Array(0..<10), environment: ())
         let parent = UIViewController()
-        UIApplication.shared.keyWindow?.rootViewController = parent
+        UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = parent
         parent.present(collectionViewController, animated: true, completion: {
             let viewControllers = collectionViewController.collectionView!.visibleCells
                 .compactMap { $0 as? CollectionViewCell<ViewController> }
@@ -108,7 +108,7 @@ class CollectionViewCellTests: XCTestCase {
             _ = collectionViewController.view // load view
             (collectionViewController.collectionViewLayout as! UICollectionViewFlowLayout).scrollDirection = .vertical
 
-            UIApplication.shared.keyWindow?.rootViewController = collectionViewController
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = collectionViewController
             for expects in data {
                 collectionViewController.input(expects)
                 collectionViewController.collectionView!.layoutIfNeeded()
@@ -117,7 +117,7 @@ class CollectionViewCellTests: XCTestCase {
                     let expectedSize = CGSize(width: min(collectionViewController.collectionView!.frame.width - 40.0, 200 + expect.additionalWidth), height: 200 + expect.additionalHeight)
                     XCTAssertEqual(cell.frame.size, expectedSize)
                     XCTAssertEqual(cell.contentView.frame.size, expectedSize)
-                    let childViewController = collectionViewController.childViewControllers.first(where: { $0.view.superview == cell.contentView }) as! AutolayoutViewController
+                    let childViewController = collectionViewController.children.first(where: { $0.view.superview == cell.contentView }) as! AutolayoutViewController
                     XCTAssertEqual(childViewController.view.frame.size, expectedSize)
                     XCTAssertFalse(cell.hasAmbiguousLayout)
                 }
@@ -128,7 +128,7 @@ class CollectionViewCellTests: XCTestCase {
             _ = collectionViewController.view // load view
             (collectionViewController.collectionViewLayout as! UICollectionViewFlowLayout).scrollDirection = .horizontal
 
-            UIApplication.shared.keyWindow?.rootViewController = collectionViewController
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = collectionViewController
             for expects in data {
                 collectionViewController.input(expects)
                 collectionViewController.collectionView!.layoutIfNeeded()
@@ -137,7 +137,7 @@ class CollectionViewCellTests: XCTestCase {
                     let expectedSize = CGSize(width: 200 + expect.additionalWidth, height: min(collectionViewController.collectionView!.frame.height - 40.0, 200 + expect.additionalHeight))
                     XCTAssertEqual(cell.frame.size, expectedSize)
                     XCTAssertEqual(cell.contentView.frame.size, expectedSize)
-                    let childViewController = collectionViewController.childViewControllers.first(where: { $0.view.superview == cell.contentView }) as! AutolayoutViewController
+                    let childViewController = collectionViewController.children.first(where: { $0.view.superview == cell.contentView }) as! AutolayoutViewController
                     XCTAssertEqual(childViewController.view.frame.size, expectedSize)
                     XCTAssertFalse(cell.hasAmbiguousLayout)
                 }
